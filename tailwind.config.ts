@@ -1,0 +1,107 @@
+import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
+
+export default <Partial<Config>> {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['DM Sans', 'DM Sans fallback', ...defaultTheme.fontFamily.sans],
+      },
+      gridTemplateColumns: {
+        16: 'repeat(16, minmax(0, 1fr))',
+      },
+      gridColumn: {
+        'span-13': 'span 13 / span 13',
+        'span-14': 'span 14 / span 14',
+        'span-15': 'span 15 / span 15',
+        'span-16': 'span 16 / span 16',
+      },
+      // custom colors
+      colors: {
+        primary: {
+          DEFAULT: '#1479b8',
+          50: '#f1f8fe',
+          100: '#e3f0fb',
+          200: '#c0e2f7',
+          300: '#88caf1',
+          400: '#49afe7',
+          500: '#2296d5',
+          600: '#1479b8',
+          700: '#115f93',
+          800: '#12517a',
+          900: '#154465',
+          950: '#0e2c43',
+        },
+        danger: {
+          DEFAULT: '#db3d50',
+          50: '#fef2f2',
+          100: '#fee5e5',
+          200: '#fbd0d1',
+          300: '#f8a9ab',
+          400: '#f3797e',
+          500: '#ea4955',
+          600: '#db3d50',
+          700: '#b51b32',
+          800: '#971a30',
+          900: '#82192f',
+          950: '#480915',
+        },
+        success: {
+          DEFAULT: '#00a86b',
+          50: '#ebfef4',
+          100: '#d0fbe3',
+          200: '#a4f6cc',
+          300: '#6aebb1',
+          400: '#2fd891',
+          500: '#0abf79',
+          600: '#00a86b',
+          700: '#007c52',
+          800: '#036242',
+          900: '#045038',
+          950: '#012d21',
+        },
+        warning: {
+          DEFAULT: '#cfa300',
+          50: '#ffffe7',
+          100: '#fdffc2',
+          200: '#ffff87',
+          300: '#fff843',
+          400: '#ffe910',
+          500: '#fcdb03',
+          600: '#cfa300',
+          700: '#a57503',
+          800: '#885b0b',
+          900: '#734a10',
+          950: '#432705',
+        },
+        info: {
+          DEFAULT: '#5574bb',
+          50: '#f3f6fb',
+          100: '#e3ebf6',
+          200: '#ceddef',
+          300: '#adc5e3',
+          400: '#85a8d5',
+          500: '#5e84c5',
+          600: '#5574bb',
+          700: '#4a63ab',
+          800: '#41528c',
+          900: '#384670',
+          950: '#262d45',
+        },
+      },
+    },
+  },
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './modules/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './app.vue',
+    './error.vue',
+  ],
+  plugins: [
+  ],
+  variants: {
+  },
+}
