@@ -26,18 +26,6 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'light',
   },
-  nitro: {
-    esbuild: {
-      options: {
-        target: 'esnext',
-      },
-    },
-    prerender: {
-      crawlLinks: false,
-      routes: ['/'],
-      ignore: ['/hi'],
-    },
-  },
   app: {
     head: {
       viewport: 'width=device-width,initial-scale=1',
