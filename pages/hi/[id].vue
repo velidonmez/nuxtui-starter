@@ -19,7 +19,7 @@ watchEffect(() => {
     </div>
     <template v-if="user.otherNames.length">
       <div class="my-4 text-sm">
-        <span op-50>Also as known as:</span>
+        <span>Also as known as:</span>
         <ul>
           <li v-for="otherName in user.otherNames" :key="otherName">
             <router-link :to="`/hi/${otherName}`" replace>
